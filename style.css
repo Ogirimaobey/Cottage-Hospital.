@@ -202,7 +202,7 @@ nav ul li a:hover {
 
 .why-choose-us .container {
     display: flex;
-    align-items: center;
+    align-items: stretch; /* Makes both columns equal height */
     gap: 50px;
 }
 
@@ -211,8 +211,7 @@ nav ul li a:hover {
 }
 
 .why-image img {
-    width: 100%;
-    border-radius: 10px;
+    display: none; /* Hides the image tag if it's there */
 }
 
 .why-content {
@@ -238,6 +237,31 @@ nav ul li a:hover {
     color: var(--primary-blue);
     display: block;
     font-size: 20px;
+}
+
+.text-placeholder {
+    background-color: var(--background-light);
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.text-placeholder h2 {
+    font-size: 36px;
+    color: var(--primary-blue);
+    margin: 0 0 10px 0;
+}
+
+.text-placeholder p {
+    font-size: 18px;
+    color: #555;
+    margin: 0;
 }
 
 /* Footer */
