@@ -1,0 +1,289 @@
+/* General Styling */
+:root {
+    --primary-blue: #005792;
+    --secondary-teal: #00A890;
+    --background-light: #F7F7F7;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+/* Header */
+header {
+    background: var(--text-light);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--primary-blue);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-blue);
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
+}
+
+.header-contact span {
+    margin-right: 15px;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary-blue);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background: #00416a;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-light);
+    border: 2px solid var(--text-light);
+}
+
+.btn-secondary:hover {
+    background: var(--text-light);
+    color: var(--primary-blue);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-light);
+    padding-top: 80px; /* Offset for fixed header */
+}
+
+.hero-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.hero-video-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+    margin: 0 10px;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 0;
+    background: var(--background-light);
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card {
+    background: var(--text-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    flex-basis: 31%;
+}
+
+.card h3 {
+    font-size: 22px;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 80px 0;
+}
+
+.why-choose-us .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.why-image {
+    flex: 1;
+}
+
+.why-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.why-content {
+    flex: 1;
+}
+
+.why-content h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.why-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-content ul li {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.why-content ul li strong {
+    color: var(--primary-blue);
+    display: block;
+    font-size: 20px;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-blue);
+    color: var(--text-light);
+    padding: 60px 0 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-col {
+    flex-basis: 22%;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--text-light);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid #00416a;
+}
